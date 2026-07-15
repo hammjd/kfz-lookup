@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:de.wikipedia.org)",
+      "Bash(curl -s \"https://de.wikipedia.org/w/index.php?title=Liste_der_deutschen_Kfz-Kennzeichen,_die_nicht_mehr_ausgegeben_werden&action=raw\" -o /private/tmp/claude-501/-Users-jeffhamm-file-move/43fc3ee0-b948-42a0-99ea-bc9fdd6048f7/scratchpad/kfz_historical.wikitext)",
+      "Bash(python3 parse_current.py)",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -n \"^| rowspan.*'''H'''$\\\\|'''H'''$\" -A15 /private/tmp/claude-501/-Users-jeffhamm-file-move/43fc3ee0-b948-42a0-99ea-bc9fdd6048f7/scratchpad/kfz_raw.wikitext)",
+      "Bash(python3 parse_historical.py)",
+      "Bash(python3 build_final.py)",
+      "Bash(python3)",
+      "Bash(node -e \"require\\('/Users/jeffhamm/file.move/data/prefixes.js'\\); console.log\\('OK, codes:', Object.keys\\(PLATE_PREFIXES\\).length\\);\")",
+      "Bash(node --check /Users/jeffhamm/file.move/data/prefixes.js)",
+      "Bash(node -e ' *)",
+      "Bash(node --check /Users/jeffhamm/file.move/app.js)",
+      "Bash(node --check /Users/jeffhamm/file.move/service-worker.js)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('/Users/jeffhamm/file.move/manifest.webmanifest'\\)\\); print\\('manifest JSON OK'\\)\")",
+      "Bash(node --check index.html)",
+      "Bash(node --check app.js)",
+      "Bash(node --check service-worker.js)",
+      "Bash(node --check data/prefixes.js)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('manifest.webmanifest'\\)\\); print\\('manifest.webmanifest OK'\\)\")"
+    ]
+  }
+}

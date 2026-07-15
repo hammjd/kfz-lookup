@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>German License Plate Lookup</title>
+  <meta name="description" content="Find the city or district associated with a German vehicle registration (Kfz-Kennzeichen) prefix." />
+  <meta name="theme-color" content="#f5c400" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <h1>German License Plate Lookup</h1>
+      <p class="subtitle">Find the city or district associated with a German registration prefix.</p>
+    </header>
+
+    <main>
+      <form id="lookup-form" class="lookup-form" autocomplete="off">
+        <label for="prefix-input" class="visually-hidden">German license plate or prefix</label>
+        <div class="plate-input-row">
+          <input
+            id="prefix-input"
+            name="prefix"
+            type="text"
+            inputmode="text"
+            class="plate-input"
+            placeholder="e.g. B, HH, WOB, M AB 1234"
+            autocapitalize="characters"
+            autocorrect="off"
+            spellcheck="false"
+            maxlength="32"
+            aria-describedby="input-help"
+          />
+        </div>
+        <p id="input-help" class="input-help">
+          Enter a prefix or a full plate, such as “B”, “B AB 1234”, or “M-XY 123”.
+        </p>
+        <div class="button-row">
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="button" id="clear-btn" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+
+      <section id="results" class="results" aria-live="polite">
+        <p id="results-placeholder" class="placeholder">
+          Enter a registration prefix above and press Search.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="disclaimer">
+        Unofficial reference tool. Registration assignments can change or include special cases.
+      </p>
+      <p class="source-note" id="source-note"></p>
+      <p class="footer-link">
+        <a href="https://hammnet.me">hammnet.me</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="data/prefixes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

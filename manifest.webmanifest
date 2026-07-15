@@ -1,0 +1,18 @@
+{
+  "name": "German License Plate Lookup",
+  "short_name": "Plate Lookup",
+  "description": "Find the city or district associated with a German vehicle registration prefix.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f4f4f2",
+  "theme_color": "#f5c400",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
